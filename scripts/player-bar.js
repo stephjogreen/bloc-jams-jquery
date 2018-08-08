@@ -15,9 +15,6 @@
     player.playPause(nextSong);
   });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   $('button#previous').on('click', function (){
   if (player.playState !== 'playing') {return;}
 
@@ -29,7 +26,7 @@
   player.playPause(previousSong);
  });
 
->>>>>>> sliderbar-assignment
+
   $('#time-control input').on('input', function (event) {
     player.skipTo(event.target.value);
   });
@@ -42,8 +39,7 @@
     $('#time-control .current-time').text( currentTime );
     $('#time-control input').val(percent);
   }, 1000);
-<<<<<<< HEAD
-=======
+
   $('button#previous').on('click', function (){
   if (player.playState !== 'playing') {return;}
 
@@ -55,12 +51,8 @@
   player.playPause(previousSong);
 });
 
->>>>>>> player-bar-assignment
-=======
-
-
   $('#volume-control input').on('input', function (event){
   player.setVolume(event.target.value);
 });
->>>>>>> sliderbar-assignment
+
 }
