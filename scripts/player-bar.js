@@ -15,6 +15,7 @@
     player.playPause(nextSong);
   });
 
+<<<<<<< HEAD
   $('#time-control input').on('input', function (event) {
     player.skipTo(event.target.value);
   });
@@ -27,4 +28,17 @@
     $('#time-control .current-time').text( currentTime );
     $('#time-control input').val(percent);
   }, 1000);
+=======
+  $('button#previous').on('click', function (){
+  if (player.playState !== 'playing') {return;}
+
+  const currentSongIndex = album.songs.indexOf(player.currentlyPlaying);
+  const previousSongIndex = currentSongIndex - 1;
+  if (previousSongIndex <= -1) {return;}
+
+  const previousSong = album.songs[previousSongIndex];
+  player.playPause(previousSong);
+});
+
+>>>>>>> player-bar-assignment
 }
