@@ -5,21 +5,16 @@ class Player {
     this.volume = 80;
     this.soundObject = new buzz.sound(this.currentlyPlaying.soundFileUrl);
   }
-//prettyTime//
+
   prettyTime (timeInSeconds) {
     if (player.playState !== 'playing') {return;}
     const sec_num = parseInt(timeInSeconds, 10);
     const seconds = Math.floor(sec_num % 60);
     const minutes = Math.floor((sec_num % 3600) / 60);
     const percent = (currentTime / duration) * 100; //maybe?//
-    const lessThan = '0:0' + seconds;
-    if (seconds <= 10) {
-      return lessThan;
-      } else {
-    return minutes + ":" + seconds;
-   }
+    return ( minutes + ":" + seconds);
   }
-//prettyTime//
+
 
   getDuration() {
     return this.soundObject.getDuration();

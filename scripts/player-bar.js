@@ -38,10 +38,11 @@
     const percent = (currentTime / duration) * 100;
     $('#time-control .current-time').text( currentTime );
     $('#time-control input').val(percent);
+    $('.total-time').text (player.prettyTime(duration));
   }, 1000);
 
-  $('button#previous').on('click', function (){
-  if (player.playState !== 'playing') {return;}
+   $('button#previous').on('click', function (){
+   if (player.playState !== 'playing') {return;}
 
   const currentSongIndex = album.songs.indexOf(player.currentlyPlaying);
   const previousSongIndex = currentSongIndex - 1;
